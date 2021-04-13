@@ -6,7 +6,8 @@ void sy(std::string& p) {
 
 }
 
-void reversy(std::string& p) {
+void reversy(std::string& p) {//creation of an algorithm for 
+	//flipping parts of a string by dividing ';'. completed in about 15 minutes
 	std::string tmp_S = "";
 	std::string tmp_S2 = "";
 
@@ -35,7 +36,7 @@ int main() {
 	reversy(ss);
 	std::cout << ss << std::endl;
 	std::vector<IGameObject*> objects = { new Human("Rodg"), new Human("Julia"),new Android("Oreo"), new Beast("Jinx"),new Beast("Koil") };
-	for (auto o : objects) {
+	for (auto o : objects) {//we overhaul everything that each of the classes can do
 		auto movable_object = dynamic_cast<IMovable*>(o);
 		if (movable_object != nullptr)
 		{
@@ -57,17 +58,5 @@ int main() {
 			damaggable_object->Damage();
 		}
 	}
-
-
-
-	//Human h;
-	//ISkinable::Skin s;
-	//s.model = "Human";
-	//s.color = "red";
-	//h.ApplySkin(s);
-	//h.Damage();
-	//std::string c=h.ModelName();
-	//std::cout <<"\n"<< c<<std::endl;
-	//h.ShootOrBit(ICanDemage::Damagem::SHOOT);
 
 }

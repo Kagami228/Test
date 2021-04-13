@@ -2,10 +2,18 @@
 #include <string>
 #include <iostream>
 
-struct IGameObject
+struct IGameObject 
 {
 	virtual ~IGameObject() {};
 };
+//I divided the class into small structures in order 
+//to create structures by combining their capabilities, for example, 
+//a dryad can attack, take damage, and wear skins, but cannot 
+//move, so we inherit only from (IDamagable, ISkinable, ICanDemage, IGameObject)
+
+
+
+//the hierarchy is simple, simple structures from which we create the main classes
 struct IMovable
 {
 	virtual ~IMovable() {};
