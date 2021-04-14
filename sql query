@@ -1,0 +1,17 @@
+-----I understood the task, so I need to bring the three best in their assigned place-----
+
+
+
+SELECT Competitions.Competition_name as competition, Scores.score as place, Person.name as name, Person.country as country,
+Person.city as city From Person Left Join Scores on Person.uid_p=Scores.uid_p 
+LEFT Join Competitions on Scores.uid_c=Competitions.uid_c
+Where Scores.score<=3
+
+
+----------I made such a request to find the best in a row, that is, I thought that the larger the result, the better
+  they are, but I also calculated that the values ​​for each sport are considered according to the same standard.--------------
+
+
+
+select * from (select name,city, country,s.score,Competition_name as cn   from person as p join scores as s on p.uid_p==s.uid_p join Competitions as c on c.uid_c== s.uid_c
+order by score desc limit (select count(*) from Competitions)*3) order by cn

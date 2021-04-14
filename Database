@@ -1,0 +1,22 @@
+CREATE TABLE "Competitions" (
+	"uid_c"	INTEGER NOT NULL UNIQUE,
+	"Competition_name"	TEXT NOT NULL UNIQUE,
+	PRIMARY KEY("uid_c")
+);
+
+
+CREATE TABLE "Person" (
+	"uid_p"	INTEGER NOT NULL UNIQUE,
+	"name"	TEXT NOT NULL,
+	"last_name"	TEXT NOT NULL,
+	"city"	TEXT NOT NULL,
+	"country"	TEXT NOT NULL,
+	PRIMARY KEY("uid_p")
+);
+
+CREATE TABLE "Scores" (
+	"uid_p"	INTEGER NOT NULL,
+	"uid_c"	INTEGER NOT NULL,
+	"score"	INTEGER,
+	FOREIGN KEY("uid_p") REFERENCES "Person"("uid_p")
+);

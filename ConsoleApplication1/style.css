@@ -1,0 +1,14 @@
+table {
+    width: 450px;
+    height: 450px;
+    border-spacing: 1px; 
+   }
+td, th {
+    background: maroon;
+    padding: 5px; 
+}
+button{
+   width: 150px;
+   height: 150px;
+}
+
