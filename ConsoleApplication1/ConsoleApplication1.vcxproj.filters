@@ -37,5 +37,8 @@
     <None Include="..\..\..\..\Videos\test\style.css">
       <Filter>js_html_test</Filter>
     </None>
+    <None Include="ClassDiagram.cd">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
